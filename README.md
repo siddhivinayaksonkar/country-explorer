@@ -27,7 +27,7 @@ Discover fascinating details about countries:
 
 1. Clone this repo:
 ```bash
-git clone https://github.com/yourusername/country-explorer.git
+git clone https://github.com/siddhivinayaksonkar/country-explorer.git
 cd country-explorer
 ```
 
