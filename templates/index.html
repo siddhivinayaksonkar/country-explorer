@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-globe-americas text-primary"></i> Country Explorer
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="glass-card">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-center mb-4">
+                            <span class="gradient-text">Compare Countries</span>
+                        </h2>
+                        
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="input-group-custom">
+                                    <input type="text" class="form-control modern-input" id="country1" placeholder="Enter first country">
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center d-flex align-items-center justify-content-center">
+                                <div class="vs-badge">VS</div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="input-group-custom">
+                                    <input type="text" class="form-control modern-input" id="country2" placeholder="Enter second country">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-glow px-5" onclick="compareCountries()">
+                                <i class="fas fa-random"></i> Compare
+                            </button>
+                        </div>
+
+                        <div id="error-message" class="alert alert-danger mt-4 modern-alert" style="display: none;"></div>
+                        <div id="loading" class="text-center mt-4" style="display: none;">
+                            <div class="modern-spinner">
+                                <div class="spinner-ring"></div>
+                                <span class="loading-text">Fetching data...</span>
+                            </div>
+                        </div>
+
+                        <div id="comparison-results" class="mt-4" style="display: none;">
+                            <div class="table-responsive">
+                                <table class="table table-hover modern-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th id="country1-header"></th>
+                                            <th id="country2-header"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="comparison-body">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer py-3">
+        <div class="container text-center">
+            <span class="text-muted">Data provided by <a href="https://restcountries.com" class="gradient-text" target="_blank">REST Countries API</a></span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 

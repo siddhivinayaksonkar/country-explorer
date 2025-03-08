@@ -1,0 +1,213 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --surface: #1a1b26;
+    --surface-dark: #16161e;
+    --text: #a9b1d6;
+    --text-bright: #c0caf5;
+    --accent: #7aa2f7;
+    --danger: #f7768e;
+    --success: #9ece6a;
+}
+
+body.dark-theme {
+    background: linear-gradient(135deg, var(--surface-dark) 0%, var(--surface) 100%);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: rgba(26, 27, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-bright) !important;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+    color: var(--primary);
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(26, 27, 38, 0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Modern Inputs */
+.input-group-custom {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.modern-input {
+    background: rgba(26, 27, 38, 0.6) !important;
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    color: var(--text-bright) !important;
+    transition: all 0.3s ease;
+}
+
+.modern-input:focus {
+    box-shadow: 0 0 0 2px var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.modern-input::placeholder {
+    color: var(--text);
+    opacity: 0.7;
+}
+
+/* VS Badge */
+.vs-badge {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Glow Button */
+.btn-glow {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+    color: white;
+}
+
+/* Modern Table */
+.modern-table {
+    background: rgba(26, 27, 38, 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modern-table thead {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.modern-table th {
+    color: white !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding: 1rem !important;
+    border: none !important;
+}
+
+.modern-table td {
+    color: var(--text);
+    padding: 1rem !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.modern-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Modern Spinner */
+.modern-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spinner-ring {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(99, 102, 241, 0.1);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    color: var(--text);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Modern Alert */
+.modern-alert {
+    background: rgba(247, 118, 142, 0.1) !important;
+    border: 1px solid var(--danger) !important;
+    color: var(--danger) !important;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Footer */
+.footer {
+    background: rgba(26, 27, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+/* Attribute Name */
+.attribute-name {
+    color: var(--accent) !important;
+    font-weight: 600;
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vs-badge {
+        margin: 20px 0;
+    }
+    
+    .modern-table {
+        font-size: 0.9rem;
+    }
+    
+    .glass-card {
+        margin: 1rem;
+    }
+} 
