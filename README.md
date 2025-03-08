@@ -65,14 +65,8 @@ Got ideas to make this even better? Feel free to:
 - Share your feedback
 - Suggest new features
 
-## 📝 License
-
-MIT License - Feel free to use this for learning, teaching, or building something awesome!
-
 ## 🌟 Credits
 
 Data provided by the amazing [REST Countries API](https://restcountries.com/)
 
 ---
-
-Made with ❤️ for geography lovers and curious minds 
